@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const program = require('commander');
 const chalk = require('chalk');
+const minimist = require('minimist');
 const pkg = require('../package.json');
 const config = require('../lib/config');
 const surl = require('..');
@@ -20,15 +21,16 @@ program.on('--help', () => {
 program
   .command('config')
   .description('Set the global options')
-  .option('-p, --pages', 'Set up a github pages url or domain')
-  .option('-d, --database', 'Set up a gitHub repository as a url database')
+  .option('--pages', 'Set up a github pages url or domain')
+  .option('--database', 'Set up a gitHub repository name as a url database')
+  .option('--user', 'Set up your gitHub user name')
   .action(args => {
     // if input is 'shorten config'，then show the help info
     if(process.argv.length === 3) {
       return program.command('config').help();
     }
-    const { pages, database } = args;
-    const options = resolveOptions({ pages, database });
+    const { pages, database, user } = minimist(process.argv.slice(2));
+    const options = {pages, database, user};
     return config.write(options);
   })
 
@@ -37,14 +39,6 @@ program.parse(process.argv);
 
 if (!process.argv.slice(2).length) {
   program.outputHelp();
-}
-
-function resolveOptions(options) {
-  const opts = {};
-  Object.keys(options)
-    .filter(key => isBoolean(options[key]))
-    .map(key => opts[key] = options[key]);
-  return opts;
 }
 
 async function runShorten(options = {}) {
