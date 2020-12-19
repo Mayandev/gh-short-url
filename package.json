@@ -1,0 +1,24 @@
+{
+  "name": "gh-short-url",
+  "version": "0.0.1-alpha",
+  "description": "A command line tool that use github pages to convert short url",
+  "main": "index.js",
+  "bin": {
+    "gh-short-url": "bin/main.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gh-pages",
+    "github",
+    "pages"
+  ],
+  "author": "phillzou@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.2.1",
+    "minimist": "^1.2.5"
+  }
+}
