@@ -1,6 +1,6 @@
 {
   "name": "gh-short-url",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A command line tool that use github pages to convert short url",
   "main": "index.js",
   "repository": {
