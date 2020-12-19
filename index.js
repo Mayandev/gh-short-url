@@ -1,5 +1,4 @@
 const chalk = require('chalk');
-const ora = require('ora');
 const DB = require('./lib/db.json');
 const {
   isGithubCliInstalled,
@@ -20,6 +19,7 @@ module.exports = function (url, options) {
   if (!isGithubCliInstalled()) {
     return;
   }
+  console.log(chalk.cyan('Converting...'));
   const { database = DB.db, user = DB.user, pages = DB.pages } = options;
   if (isInRepo(database)) {
     convertURL(url, pages);
