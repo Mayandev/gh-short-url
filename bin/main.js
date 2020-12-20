@@ -14,8 +14,8 @@ program
 
 program.on('--help', () => {
   console.log('');
-  console.log(chalk.green('Examples: '))
-  console.log(chalk.cyan('shorten https://en.wikipedia.org/wiki/Kobe_Bryant#Basketball_legacy'))
+  console.log(chalk.green('Examples: '));
+  console.log(chalk.cyan(' $ shorten https://en.wikipedia.org/wiki/Kobe_Bryant#Basketball_legacy'))
 })
 
 program
@@ -43,7 +43,6 @@ if (!process.argv.slice(2).length) {
 
 async function runShorten(options = {}) {
   const defaultOptions = await config.load();
-  console.log('default', defaultOptions);
   const mergedOptions = { ...defaultOptions, ...options };
   surl(program.args.join(' '), mergedOptions);
 }
