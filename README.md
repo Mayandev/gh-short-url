@@ -19,6 +19,7 @@ A command line tool that use github pages to convert short url.
 
 4. Now, try to open an issue in the repository you created in step 2. The issue title should be a valid url, the body can be empty. Then you can use `${username}.github.io/${link repo}/1` to access the url you entered in the issue title. Mabye the link is still too long and you should use your own domain name.
 
+You can see the detail at here: [gh-pages-url-shortener](https://github.com/nelsontky/gh-pages-url-shortener#-this-is-so-cool-how-can-i-use-this-with-my-own-domain)
 
 ## How to use
 
