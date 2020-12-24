@@ -39,7 +39,8 @@ shorten https://en.wikipedia.org/wiki/Kobe_Bryant#Basketball_legacy/
 surl https://en.wikipedia.org/wiki/Kobe_Bryant#Basketball_legacy
 ```
 
-![](https://mayandev.oss-cn-hangzhou.aliyuncs.com/blog/short-url-6.png)
+![image](https://user-images.githubusercontent.com/28648715/102714280-719f5980-4308-11eb-9996-7e39e91ce712.png)
+
 
 
 ## How does this work
