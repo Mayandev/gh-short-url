@@ -31,8 +31,8 @@ Let do it!
 # install package
 npm install gh-short-url -g
 # config your url database repository and github user name and github pages domain
-# example: shorten config --database="gh-pages-url-shortener-db" --user="mayandev" --pages="mayandev.github.io/link"
-shorten config --database=${db-repo-name} --user=${username} --pages=${domain/url-repo}
+# example: shorten config --database="gh-pages-url-shortener-db" --user="mayandev" --pages="mayandev.github.io/link/"
+shorten config --database=${db-repo-name} --user=${username} --pages=${domain/url-repo/}
 # shorten it
 shorten https://en.wikipedia.org/wiki/Kobe_Bryant#Basketball_legacy/
 # you can also use surl
